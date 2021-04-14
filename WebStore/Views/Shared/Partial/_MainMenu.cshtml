@@ -1,0 +1,23 @@
+﻿<ul class="nav navbar-nav collapse navbar-collapse">
+    <li><a href="#" class="active">Home</a></li>
+    <li class="dropdown">
+        <a href="#">Магазин<i class="fa fa-angle-down"></i></a>
+        <ul role="menu" class="sub-menu">
+            <li><a asp-controller="Catalog" asp-action="Index">Каталог</a></li>
+            <li><a href="#">О товаре</a></li>
+            <li><a href="#">Оформить заказ</a></li>
+            <li><a href="#">Корзина</a></li>
+            <li><a href="#">Вход</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#">Блог<i class="fa fa-angle-down"></i></a>
+        <ul role="menu" class="sub-menu">
+            <li><a href="#">Список блогов</a></li>
+            <li><a href="#">Блог магазина</a></li>
+        </ul>
+    </li>
+    <li><a href="#">404</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a asp-controller="Employees" asp-action="Index">Сотрудники</a></li>
+</ul>
