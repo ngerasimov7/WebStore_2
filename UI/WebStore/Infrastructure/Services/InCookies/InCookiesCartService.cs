@@ -1,13 +1,11 @@
 ﻿using System.Linq;
-
 using Microsoft.AspNetCore.Http;
-
 using Newtonsoft.Json;
 using WebStore.Domain;
 using WebStore.Domain.Entities;
 using WebStore.Infrastructure.Mapping;
-using WebStore.Infrastructure.Services.Interfaces;
-using WebStore.ViewModels;
+using WebStore.Interfaces;
+using WebStore.Domain.ViewModels;
 
 namespace WebStore.Infrastructure.Services.InCookies
 {
@@ -112,7 +110,7 @@ namespace WebStore.Infrastructure.Services.InCookies
             return new CartViewModel
             {
                 Items = Cart.Items
-                   .Where(item => products_views.ContainsKey(item.ProductId))
+                   .Where(item => products_views.ContainsKey(key: item.ProductId))
                    .Select(item => (products_views[item.ProductId], item.Quantity))
             };
         }

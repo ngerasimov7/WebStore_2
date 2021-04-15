@@ -2,8 +2,8 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using WebStore.Infrastructure.Services.Interfaces;
-using WebStore.ViewModels;
+using WebStore.Interfaces;
+using WebStore.Domain.ViewModels;
 
 namespace WebStore.Controllers
 {

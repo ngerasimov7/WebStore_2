@@ -3,7 +3,7 @@ using System.Linq;
 using WebStore.Data;
 using WebStore.Domain;
 using WebStore.Domain.Entities;
-using WebStore.Infrastructure.Services.Interfaces;
+using WebStore.Interfaces;
 
 namespace WebStore.Infrastructure.Services.InMemory
 {
