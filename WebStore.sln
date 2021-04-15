@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.DAL.Sqlite", "Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore", "UI\WebStore\WebStore.csproj", "{D2ADAFCE-C1C6-4CBF-ADC1-1AEC90D1B4C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.Interfaces", "Services\WebStore.Interfaces\WebStore.Interfaces.csproj", "{30E8B2B6-AE26-4C54-ADCC-5397887F1546}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D2ADAFCE-C1C6-4CBF-ADC1-1AEC90D1B4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2ADAFCE-C1C6-4CBF-ADC1-1AEC90D1B4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2ADAFCE-C1C6-4CBF-ADC1-1AEC90D1B4C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E8B2B6-AE26-4C54-ADCC-5397887F1546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E8B2B6-AE26-4C54-ADCC-5397887F1546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E8B2B6-AE26-4C54-ADCC-5397887F1546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E8B2B6-AE26-4C54-ADCC-5397887F1546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{5508D8CC-E1B0-4D2C-B816-E57E248EB8BA} = {BEBBBA27-EC5D-4BBF-8E69-952DBB25B265}
 		{A47944CE-6FEF-4A5A-AC16-61D0EA34B7DE} = {BEBBBA27-EC5D-4BBF-8E69-952DBB25B265}
 		{D2ADAFCE-C1C6-4CBF-ADC1-1AEC90D1B4C3} = {DD7FF2DF-EF74-43F3-82E3-0CEA8000A2D9}
+		{30E8B2B6-AE26-4C54-ADCC-5397887F1546} = {BEBBBA27-EC5D-4BBF-8E69-952DBB25B265}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F526B6AB-6BEF-49D9-AE15-9F50F08FE0CD}
