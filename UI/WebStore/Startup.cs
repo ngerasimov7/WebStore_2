@@ -9,16 +9,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using WebStore.Clients.Values;
 using WebStore.DAL.Context;
-using WebStore.Services.Data;
 using WebStore.Domain.Entities.Identity;
 using WebStore.Infrastructure.Conventions;
-using WebStore.Services;
+using WebStore.Interfaces.Servcies;
+using WebStore.Interfaces.TestAPI;
+using WebStore.Services.Data;
 using WebStore.Services.InCookies;
 using WebStore.Services.InMemory;
 using WebStore.Services.InSQL;
-using WebStore.Interfaces;
 
 namespace WebStore
 {
@@ -26,15 +26,11 @@ namespace WebStore
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<WebStoreDB>(opt =>
-            //    opt.UseSqlServer(Configuration.GetConnectionString("Default"))
-            //    //.EnableSensitiveDataLogging(true)
-            //    //.LogTo(Console.WriteLine)
-            //    );
-            services.AddDbContext<WebStoreDB>(opt => 
-                opt.UseSqlite(
-                    Configuration.GetConnectionString("Sqlite"), 
-                    o => o.MigrationsAssembly("WebStore.DAL.Sqlite")));
+            services.AddDbContext<WebStoreDB>(opt =>
+                opt.UseSqlServer(Configuration.GetConnectionString("Default"))
+                //.EnableSensitiveDataLogging(true)
+                //.LogTo(Console.WriteLine)
+                );
             services.AddTransient<WebStoreDbInitializer>();
 
             services.AddIdentity<User, Role>()
@@ -43,14 +39,14 @@ namespace WebStore
 
             services.Configure<IdentityOptions>(opt =>
             {
-//#if DEBUG
+#if DEBUG
                 opt.Password.RequiredLength = 3;
                 opt.Password.RequireDigit = false;
                 opt.Password.RequireLowercase = false;
                 opt.Password.RequireUppercase = false;
                 opt.Password.RequireNonAlphanumeric = false;
                 opt.Password.RequiredUniqueChars = 3;
-//#endif
+#endif
                 opt.User.RequireUniqueEmail = false;
                 opt.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
@@ -77,6 +73,7 @@ namespace WebStore
             services.AddScoped<IProductData, SqlProductData>();
             services.AddScoped<ICartServices, InCookiesCartService>();
             services.AddScoped<IOrderService, SqlOrderService>();
+            services.AddScoped<IValuesService, ValuesClient>();
 
             services
                .AddControllersWithViews(

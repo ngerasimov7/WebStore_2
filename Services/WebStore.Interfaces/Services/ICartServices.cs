@@ -1,6 +1,6 @@
 ﻿using WebStore.Domain.ViewModels;
 
-namespace WebStore.Interfaces
+namespace WebStore.Interfaces.Servcies
 {
     public interface ICartServices
     {

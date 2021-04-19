@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>9964ab48-6dbb-45d8-9e74-043a8b4a6f1b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\WebStore.Domain\WebStore.Domain.csproj" />
-    <ProjectReference Include="..\..\Services\WebStore.DAL.Sqlite\WebStore.DAL.Sqlite.csproj" />
+    <ProjectReference Include="..\..\Services\WebStore.Clients\WebStore.Clients.csproj" />
     <ProjectReference Include="..\..\Services\WebStore.DAL\WebStore.DAL.csproj" />
     <ProjectReference Include="..\..\Services\WebStore.Interfaces\WebStore.Interfaces.csproj" />
     <ProjectReference Include="..\..\Services\WebStore.Services\WebStore.Services.csproj" />

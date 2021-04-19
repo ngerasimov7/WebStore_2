@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using WebStore.DAL.Context;
 using WebStore.Domain;
 using WebStore.Domain.Entities;
-using WebStore.Interfaces;
+using WebStore.Interfaces.Servcies;
 
 namespace WebStore.Services.InSQL
 {
