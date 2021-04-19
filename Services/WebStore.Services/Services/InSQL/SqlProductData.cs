@@ -8,7 +8,7 @@ using WebStore.Domain;
 using WebStore.Domain.Entities;
 using WebStore.Interfaces;
 
-namespace WebStore.Infrastructure.Services.InSQL
+namespace WebStore.Services.InSQL
 {
     public class SqlProductData : IProductData // UnitOfWork
     {
